@@ -1,2 +1,3 @@
-# week_3_www
-Created with CodeSandbox
+# vanilla-template
+
+Weekly assignment 3.
