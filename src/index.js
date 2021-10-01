@@ -50,8 +50,9 @@ function initializeCode() {
         wiki_img.src = imgURL;
         console.log(imgURL);
         img_container.appendChild(wiki_img);
-        wiki_content.appendChild(wiki_text);
         wiki_content.appendChild(img_container);
+        wiki_content.appendChild(wiki_text);
+
         wiki_item.appendChild(wiki_header);
         wiki_item.appendChild(wiki_content);
         container.appendChild(wiki_item);
