@@ -2,7 +2,7 @@ body {
   font-family: sans-serif;
 }
 .wiki-img {
-  max-width: 100%;
+  width: 100%;
 }
 .wiki-item {
   margin-left: 10px;
