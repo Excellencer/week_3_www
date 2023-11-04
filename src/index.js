@@ -10,7 +10,7 @@ if (document.readyState !== "loading") {
 
 function initializeCode() {
   let container = document.getElementById("container");
-  let breed = "Shiba";
+  const breed = ["shiba", "akita", "poodle", "rottweiler", "beagle"];
 
   for (let i = 0; i < 5; i++) {
     let wiki_item = document.createElement("div");
@@ -18,13 +18,13 @@ function initializeCode() {
 
     let wiki_header = document.createElement("h1");
     wiki_header.classList.add("wiki-header");
-    wiki_header.appendChild(document.createTextNode(breed));
+    wiki_header.appendChild(document.createTextNode(breed[i]));
 
     let wiki_content = document.createElement("div");
     wiki_content.classList.add("wiki-content");
 
     let summary = "";
-    fetch("https://en.wikipedia.org/api/rest_v1/page/summary/Shiba")
+    fetch("https://en.wikipedia.org/api/rest_v1/page/summary/" + breed[i])
       .then((response) => response.json())
       .then((data) => {
         summary = data.extract;
@@ -37,7 +37,7 @@ function initializeCode() {
         img_container.classList.add("img-container");
 
         let imgURL = "";
-        fetch("https://dog.ceo/api/breed/shiba/images/random")
+        fetch("https://dog.ceo/api/breed/" + breed[i] + "/images/random")
           .then((response) => response.json())
           .then((data) => {
             imgURL = data.message;
